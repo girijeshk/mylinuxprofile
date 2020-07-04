@@ -1,0 +1,3 @@
+echo create database $1';'
+echo create user \'$1\'@\'localhost\' identified by \'$1\'';'
+echo grant all on $1.* to \'$1\'@\'localhost\'';'
