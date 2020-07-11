@@ -29,6 +29,9 @@ createAliasIfSafe() {
 # vim configuration
 createAliasIfSafe $ROOTDIR/vim ~/.vim
 createAliasIfSafe $ROOTDIR/vim/vimrc ~/.vimrc
+pushd $ROOTDIR/vim/pack/tpope/start
+vim -u NONE -c "helptags fugitive/doc" -c q
+popd
 
 # tmux configuration
 createAliasIfSafe $ROOTDIR/tmux/tmux.conf ~/.tmux.conf
