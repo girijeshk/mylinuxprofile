@@ -29,8 +29,13 @@ createAliasIfSafe() {
 # vim configuration
 createAliasIfSafe $ROOTDIR/vim ~/.vim
 createAliasIfSafe $ROOTDIR/vim/vimrc ~/.vimrc
-pushd $ROOTDIR/vim/pack/tpope/start
+pushd ~/.vim/pack/tpope/start
 vim -u NONE -c "helptags fugitive/doc" -c q
+popd
+createAliasIfSafe $ROOTDIR/coc ~/.config/coc
+createAliasIfSafe $ROOTDIR/jdt-language-server-latest ~/.config/coc/jdt-language-server
+pushd $ROOTDIR/coc/extensions
+npm install
 popd
 
 # tmux configuration

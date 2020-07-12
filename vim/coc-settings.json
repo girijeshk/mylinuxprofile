@@ -13,5 +13,7 @@
         }
       }
     }
-  }
+  },
+  "java.jdt.ls.home": "/home/girijesh/.config/coc/jdt-language-server",
+  "java.jdt.ls.vmargs": "-noverify -Xmx500M -XX:+UseG1GC -XX:+UseStringDeduplication"
 }
